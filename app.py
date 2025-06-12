@@ -24,11 +24,11 @@ def formulario():
                 escritor.writerow(['Nombre', 'Apellido', 'Correo', 'Contraseña', 'Teléfono', 'Ciudad', 'CP', 'Estado'])
             escritor.writerow([nombre, apellido, correo, contraseña, telefono, ciudad, CP, estado])
 
-        return f"""
+        return """
         <h2>¡Registro exitoso!</h2>
         <a href="/">Volver</a>
         """
-
+    
     return render_template('index.html')
 
 if __name__ == '__main__':
