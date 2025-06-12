@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Formulario de examen</title>
 </head>
 <body>
-    <H1>Formulariod de examen</H1>
+    <h1>Formulario de examen</h1>
     <form action="/" method="post">
-        <input class="control" type="text" name="nombre" id="nombre" placeholder="nombre"><br><br>
-        <input class="control" type="text" name="apellido" id="apellido" placeholder="apellido"><br><br>
-        <input class="control" type="text" name="correo" id="correo" placeholder="correo"><br><br>
-        <input class="control"type="password" name="contraseña" id="contraseña" placeholder="contraseña"><br><br>
-        <input class="control"type="number" name="telefono" id="telefono" placeholder="telefono"><br><br>
-        <input class="control"type="text" name="ciudad" id="ciudad" placeholder="ciudad"><br><br>
-        <input class="boton"type="submit" value="Registrar">
+        <input class="control" type="text" name="nombre" placeholder="nombre" required><br><br>
+        <input class="control" type="text" name="apellido" placeholder="apellido" required><br><br>
+        <input class="control" type="text" name="correo" placeholder="correo" required><br><br>
+        <input class="control" type="password" name="contraseña" placeholder="contraseña" required><br><br>
+        <input class="control" type="number" name="telefono" placeholder="telefono" required><br><br>
+        <input class="control" type="text" name="ciudad" placeholder="ciudad" required><br><br>
+        <input class="control" type="number" name="CP" placeholder="CP" required><br><br>
+
+        <select class="control" name="estado" required>
+            <option value="">Selecciona un estado</option>
+            <option value="CDMX">CDMX</option>
+            <option value="EdoMex">Estado de México</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Otro">Otro</option>
+        </select><br><br>
+
+        <input class="boton" type="submit" value="Registrar Alumno">
     </form>
 </body>
 </html>
